@@ -424,6 +424,16 @@ console.log(oggetto2.unmatch);
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+const removeIndex = function (n) {
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].imdbID === n) {
+      movies.splice(i, 1);
+      break;
+    }
+  }
+};
+removeIndex("tt0087365");
+console.log(movies);
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
